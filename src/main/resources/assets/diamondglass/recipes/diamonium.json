@@ -1,0 +1,17 @@
+{
+	"result": {
+    	"item": "diamondglass:diamonium"
+	},
+	"pattern": [
+	   "df"
+	],
+	"type": "minecraft:crafting_shapeless",
+	"key": {
+		"d": {
+			"item": "minecraft:diamond"
+		},
+		"f": {
+			"item": "minecraft:flint"
+		}
+	}
+}

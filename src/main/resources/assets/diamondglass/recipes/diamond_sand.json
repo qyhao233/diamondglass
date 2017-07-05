@@ -1,0 +1,21 @@
+{
+    "_comment" : "      GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.DIAMOND_SAND, 8), "SSS", "SDS", "SSS", 'S', Blocks.SAND, 'D', Items.DIAMOND);",
+    "result": {
+        "item": "diamondglass:diamond_sand",
+        "count": 8
+     },
+     "pattern": [
+        "sss",
+        "sds",
+        "sss"
+     ],
+     "type": "minecraft:crafting_shaped",
+     "key": {
+        "s": {
+            "item": "minecraft:sand"
+         },
+         "d": {
+            "item": "minecraft:diamond"
+         }
+      }
+ }
