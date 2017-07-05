@@ -1,17 +1,14 @@
 {
-	"result": {
-    	"item": "diamondglass:diamonium"
-	},
-	"pattern": [
-	   "df"
-	],
-	"type": "minecraft:crafting_shapeless",
-	"key": {
-		"d": {
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+	   {
 			"item": "minecraft:diamond"
 		},
-		"f": {
+        {
 			"item": "minecraft:flint"
 		}
-	}
+	],
+    "result": {
+        "item": "diamondglass:diamonium"
+    }
 }
