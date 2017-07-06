@@ -2,11 +2,12 @@ package com.kreezcraft.diamondglass.blocks;
 
 import com.kreezcraft.diamondglass.DiamondGlass;
 import com.kreezcraft.diamondglass.client.IHasModel;
-import com.kreezcraft.diamondglass.items.ModItems;
+import com.kreezcraft.diamondglass.items.InitItems;
 
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumFacing;
@@ -22,8 +23,9 @@ public class PaneBase extends BlockPane implements IHasModel {
 		this.name = name;
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
-		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
+		setCreativeTab(CreativeTabs.MATERIALS);
+		InitBlocks.BLOCKS.add(this);
+		InitItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
 	}
 
 	@Override

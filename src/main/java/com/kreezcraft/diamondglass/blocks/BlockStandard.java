@@ -11,6 +11,10 @@ public class BlockStandard extends BlockBase {
 		setResistance(5f);
 	}
 
+	public BlockStandard(Material material, String name) {
+		super(material, name);
+	}
+
 	@Override
 	public BlockStandard setCreativeTab(CreativeTabs tab) {
 		super.setCreativeTab(tab);

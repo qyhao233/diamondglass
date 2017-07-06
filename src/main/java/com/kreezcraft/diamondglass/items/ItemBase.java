@@ -14,7 +14,7 @@ public class ItemBase extends Item implements IHasModel {
 		this.name = name;
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
-		ModItems.ITEMS.add(this);
+		InitItems.ITEMS.add(this);
 	}
 
 	public void registerItemModel() {

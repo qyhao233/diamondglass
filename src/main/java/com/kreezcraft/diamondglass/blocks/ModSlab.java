@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import com.kreezcraft.diamondglass.DiamondGlass;
 import com.kreezcraft.diamondglass.client.IHasModel;
 import com.kreezcraft.diamondglass.items.ItemSlab;
-import com.kreezcraft.diamondglass.items.ModItems;
+import com.kreezcraft.diamondglass.items.InitItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -49,8 +49,8 @@ public class ModSlab extends Block implements IHasModel {
 		setRegistryName(name);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, SlabVariant.LOWER));
-		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemSlab(this));
+		InitBlocks.BLOCKS.add(this);
+		InitItems.ITEMS.add(new ItemSlab(this));
 	}
 
 	@Override
@@ -84,31 +84,6 @@ public class ModSlab extends Block implements IHasModel {
 	@Override
 	protected boolean canSilkHarvest() {
 		return true;
-	}
-
-	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.TRANSLUCENT;
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess blockAccess, BlockPos pos, EnumFacing facing) {
-		IBlockState state2 = blockAccess.getBlockState(pos.offset(facing));
-		if (!facing.getAxis().isVertical())
-			return !(state2.getBlock() == this && (state2 == state || getDouble() == state2));
-		else if (facing == EnumFacing.DOWN && state2 == getDouble())
-			return !(state == getLower() || state == state2);
-		else if (facing == EnumFacing.UP && state2 == getDouble())
-			return !(state.getBlock() == this);
-		else if (facing == EnumFacing.UP && state == getDouble())
-			return !(state2 == getLower());
-		return !(state2.getBlock() == this && state2 == getOpposite(state));
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
 	}
 
 	@Override

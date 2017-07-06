@@ -2,11 +2,12 @@ package com.kreezcraft.diamondglass.blocks;
 
 import com.kreezcraft.diamondglass.DiamondGlass;
 import com.kreezcraft.diamondglass.client.IHasModel;
-import com.kreezcraft.diamondglass.items.ModItems;
+import com.kreezcraft.diamondglass.items.InitItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
@@ -17,11 +18,12 @@ public class ModStairs extends BlockStairs implements IHasModel {
 	public ModStairs(String name, Block block) {
 		super(block.getDefaultState());
 		this.name = name;
+		setCreativeTab(CreativeTabs.MATERIALS);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
 		useNeighborBrightness = true;
-		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
+		InitBlocks.BLOCKS.add(this);
+		InitItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
 	}
 
 	@Override
