@@ -3,6 +3,7 @@ package com.kreezcraft.diamondglass.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityFallingBlock;
@@ -13,12 +14,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class DiamondSand extends BlockStandard {
+public class DiamondSand extends BlockSand {
 
     public static boolean fallInstantly;
+    
+    protected String name;
 
 	public DiamondSand(String name) {
-		super(Material.SAND, name);
+		super();
+		this.name=name;
 		setHardness(3f);
 		setResistance(5f);
 	}

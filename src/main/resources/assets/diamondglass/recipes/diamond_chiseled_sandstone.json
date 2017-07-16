@@ -1,5 +1,5 @@
 {
-     "type": "minecraft:crafting_shaped",
+     "type": "forge:ore_shaped",
      "pattern": [
         "s",
         "s"
@@ -10,7 +10,6 @@
          }
      },
     "result": {
-        "item": "diamondglass:diamond_chiseled_sandstone",
-        "count": 1
+        "item": "diamondglass:diamond_chiseled_sandstone"
      }
  }
