@@ -8,6 +8,12 @@
     },
     "variants": {
         "normal": [{}],
-        "inventory": [{}]
+        "inventory": [{
+            "transform": "forge:default-block",
+            "model": "cube_all",
+            "textures": {
+              "all": "diamondglass:blocks/diamond_sand"
+            }
+        }]
     }
 }
