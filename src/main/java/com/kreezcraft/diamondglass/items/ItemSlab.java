@@ -31,6 +31,7 @@ public class ItemSlab extends ItemBlock {
 		String name = block.getRegistryName().getResourcePath();
 		setRegistryName(name);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
+		setCreativeTab(DiamondGlass.creativeTab);
 	}
 
 	@Override

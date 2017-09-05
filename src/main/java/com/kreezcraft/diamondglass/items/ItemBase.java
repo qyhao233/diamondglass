@@ -15,7 +15,8 @@ public class ItemBase extends Item implements IHasModel {
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
 		InitItems.ITEMS.add(this);
-	}
+		setCreativeTab(DiamondGlass.creativeTab);
+		}
 
 	public void registerItemModel() {
 		DiamondGlass.proxy.registerItemRenderer(this, 0, name);

@@ -3,6 +3,8 @@ language.name=English
 language.region=United States
 language.code=en_us
 
+itemGroup.diamondglass=Diamond Glass
+
 tile.diamondglass.diamond_glass.name=Diamond Glass
 tile.diamondglass.diamond_glass_pane.name=Diamond Glass Pane
 tile.diamondglass.diamond_glass_stairs.name=Diamond Glass Stairs
