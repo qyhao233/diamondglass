@@ -18,7 +18,7 @@ public class BlockBase extends Block implements IHasModel {
 		super(material);
 		this.name = name;
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(DiamondGlass.creativeTab);
 		setRegistryName(name);
 		InitBlocks.BLOCKS.add(this);
 		InitItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));

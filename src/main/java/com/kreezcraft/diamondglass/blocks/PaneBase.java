@@ -23,7 +23,7 @@ public class PaneBase extends BlockPane implements IHasModel {
 		this.name = name;
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(DiamondGlass.creativeTab);
 		InitBlocks.BLOCKS.add(this);
 		InitItems.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
 	}

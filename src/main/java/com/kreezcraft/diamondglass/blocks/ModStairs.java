@@ -18,7 +18,7 @@ public class ModStairs extends BlockStairs implements IHasModel {
 	public ModStairs(String name, Block block) {
 		super(block.getDefaultState());
 		this.name = name;
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(DiamondGlass.creativeTab);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setRegistryName(name);
 		useNeighborBrightness = true;

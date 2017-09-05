@@ -22,13 +22,11 @@ public class GlassBlock extends BlockGlass implements IHasModel {
 
 	public GlassBlock(String name) {
 		super(Material.GLASS, true);
-		
 		setLightOpacity(0);
 		setHardness(25f);
 		setResistance(6000f);
-
-		this.setSoundType(SoundType.GLASS);
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		setSoundType(SoundType.GLASS);
+		setCreativeTab(DiamondGlass.creativeTab);
 		setRegistryName(name);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		InitBlocks.BLOCKS.add(this);

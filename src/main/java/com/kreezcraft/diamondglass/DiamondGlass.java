@@ -14,10 +14,12 @@ public class DiamondGlass {
 
 	public static final String MODID = "diamondglass";
 	public static final String NAME = "Diamond Glass";
-	public static final String VERSION = "1.12.1-1.4.0";
+	public static final String VERSION = "1.12.1-1.5.0.7";
 
 	@Mod.Instance(MODID)
 	public static DiamondGlass instance;
+	
+	public static final DiamondGlassTab creativeTab = new DiamondGlassTab("Diamond Glass");
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

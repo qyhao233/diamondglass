@@ -42,10 +42,10 @@ public class ModSlab extends Block implements IHasModel {
 	 */
 	public ModSlab(String name, Block block) {
 		super(Material.ROCK);
-		this.setSoundType(SoundType.STONE);
+		setSoundType(SoundType.STONE);
 		setHardness(3f);
 		setResistance(5f);
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(DiamondGlass.creativeTab);
 		setRegistryName(name);
 		setUnlocalizedName(DiamondGlass.MODID + "." + name);
 		setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, SlabVariant.LOWER));
